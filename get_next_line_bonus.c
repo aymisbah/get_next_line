@@ -6,7 +6,7 @@
 /*   By: aymisbah <aymisbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:56:16 by aymisbah          #+#    #+#             */
-/*   Updated: 2024/11/28 09:36:12 by aymisbah         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:21:32 by aymisbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,8 @@ char	*get_next_line(int fd)
 	char		*str;
 	char		*s;
 
-	if (fd > OPEN_MAX || BUFFER_SIZE >= INT_MAX || fd < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || OPEN_MAX < fd
+		|| BUFFER_SIZE >= INT_MAX)
 		return (NULL);
 	buffer = malloc(BUFFER_SIZE + 1);
 	if (!buffer)

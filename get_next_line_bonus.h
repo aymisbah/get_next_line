@@ -6,7 +6,7 @@
 /*   By: aymisbah <aymisbah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:56:28 by aymisbah          #+#    #+#             */
-/*   Updated: 2024/11/28 09:54:35 by aymisbah         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:21:48 by aymisbah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 10
 # endif
 
-# include <stdio.h>
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <libc.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);
